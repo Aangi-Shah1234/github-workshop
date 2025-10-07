@@ -12,3 +12,13 @@ Removes the file "testing.py" from the working directory and staging area. The f
 
 git restore testing.py
 Restores the file "testing.py" from the last committed version. It discards changes made to the file since the last commit.
+
+  File Staged:
+  new file:   git_commands.txt
+        new file:   testing.py
+
+ git commit -m "Added git commands"
+ git push -u origin master
+
+ fork
+ git clone - url, github - local
