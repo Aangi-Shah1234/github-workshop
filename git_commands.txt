@@ -1,0 +1,14 @@
+git init
+Initializes a new Git repository in the current directory. It creates a hidden .git folder that stores all version control information.
+
+git status
+Displays the state of the working directory and staging area. It shows which changes have been staged, which haven’t, and which files aren’t being tracked by Git.
+
+git add testing.py
+Adds the file "testing.py" to the staging area, meaning it’s ready to be committed in the next version snapshot.
+
+git rm testing.py
+Removes the file "testing.py" from the working directory and staging area. The file is deleted from both Git and your local directory.
+
+git restore testing.py
+Restores the file "testing.py" from the last committed version. It discards changes made to the file since the last commit.
