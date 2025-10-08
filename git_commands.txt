@@ -1,25 +1,95 @@
 git init
-Initializes a new Git repository in the current directory. It creates a hidden .git folder that stores all version control information.
+Initializes a new Git repository in the current directory. 
+It creates a hidden .git folder that stores all version control information.
 
 git status
-Displays the state of the working directory and staging area. It shows which changes have been staged, which haven’t, and which files aren’t being tracked by Git.
+Displays the state of the working directory and staging area. 
+It shows which changes have been staged, which haven’t, and which files aren’t being tracked by Git.
 
 git add testing.py
 Adds the file "testing.py" to the staging area, meaning it’s ready to be committed in the next version snapshot.
 
 git rm testing.py
-Removes the file "testing.py" from the working directory and staging area. The file is deleted from both Git and your local directory.
+Removes the file "testing.py" from the working directory and staging area. 
+The file is deleted from both Git and your local directory.
 
 git restore testing.py
-Restores the file "testing.py" from the last committed version. It discards changes made to the file since the last commit.
+Restores the file "testing.py" from the last committed version. 
+It discards changes made to the file since the last commit.
 
-  File Staged:
-  new file:   git_commands.txt
-        new file:   testing.py
+File Staged:
+new file: git_commands.txt
+new file: testing.py
 
- git commit -m "Added git commands"
- git push -u origin master
+git commit -m "Added git commands"
+Saves the staged changes in the local repository with the given commit message.
 
- fork
- git clone - url, github - local
-This is important file..
+git push -u origin master
+Pushes the committed changes from the local master branch to the remote repository (GitHub). 
+The -u flag sets the upstream branch, so future pushes can be done using just "git push".
+
+fork
+Creates a personal copy of someone else's repository on your own GitHub account.
+ Useful for contributing to projects.
+
+git clone <repository-url>
+Copies a repository from GitHub (remote) to your local system.
+
+git restore git_commands.txt
+Restores the file "git_commands.txt" to its last committed version.
+
+git pull origin master
+Fetches the latest changes from the remote master branch and merges them into your local master branch.
+
+git branch dev
+Creates a new branch named "dev".
+
+git branch
+Lists all branches in the repository. The * symbol indicates the branch you are currently on.
+
+git switch dev
+Switches from the current branch to the "dev" branch.
+
+git add .
+Stages all modified and new files in the current directory for commit.
+
+git commit -m "Added git commands"
+Commits the staged changes with a descriptive message.
+
+git status
+Shows the current branch and status of tracked/untracked files.
+
+git switch master
+Switches back to the master branch.
+
+----------------------------------------------------
+Explanation of Branches
+----------------------------------------------------
+A branch in Git is an independent line of development that allows multiple people (or one person) 
+to work on different features or fixes without affecting the main project.
+
+By default, every repository starts with a branch called "master" (or "main" in newer versions). 
+You can create new branches for new features or experiments.
+
+Types of Branches:
+1. Master (or Main) Branch:
+   The main stable branch of the project. It should always have production-ready code.
+
+2. Development (dev) Branch:
+   Used for ongoing development work before merging into the master branch. 
+   It often contains the latest tested features.
+
+3. Feature Branch:
+   Created from the dev branch for working on a specific new feature. Once completed,
+    it is merged back into the dev branch.
+
+4. Bugfix Branch:
+   Used to fix specific bugs or issues. Once the fix is complete,
+    it is merged into the dev or master branch depending on the workflow.
+
+5. Hotfix Branch:
+   Created directly from the master branch to quickly patch critical issues in production. 
+   After fixing, it is merged into both master and dev branches.
+
+Branches make it easy to work on multiple versions or features of a project simultaneously
+ without interfering with each other.
