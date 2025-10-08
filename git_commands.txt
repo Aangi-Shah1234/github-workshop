@@ -23,3 +23,10 @@ Restores the file "testing.py" from the last committed version. It discards chan
  fork
  git clone - url, github - local
 This is important file..
+
+git log --oneline 
+git add .
+git commit -m "Updated git_commands.txt"
+git checkout master
+git push origin dev
+Merge Branches - Pull - create - base:master - compare:dev - create
